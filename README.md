@@ -1,5 +1,5 @@
 # Database-Library-System
-Database Library System........................
+Database Library System
 
 Introduction
 
