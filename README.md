@@ -1,5 +1,3 @@
-Final update
-
 # Database-Library-System
 Database Library System
 
