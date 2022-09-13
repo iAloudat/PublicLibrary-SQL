@@ -74,3 +74,5 @@ The Database Library System is intended to Automate the library activities such 
 | --- | --- | --- |
 | AuthorID **\[ PK \]** | Author ID | The number of the author |
 | AuthorName | Author Name | The name of the author |
+
+Mohammad Altamimi
