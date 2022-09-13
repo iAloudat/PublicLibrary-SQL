@@ -22,7 +22,7 @@ The Database Library System is intended to Automate the library activities such 
 
 | **Borrow** |||
 | --- | --- | --- |
-| BorrowID  **\[ PK \]** | Borrow ID | A unique number for each loan in the library,<br><br>**This ID is important to keep track record of the book (Borrowing record)** |
+| BorrowID  **\[ PK \]** | Borrow ID | A unique number for each loan in the library,<br>**This ID is important to keep track record of the book (Borrowing record)** |
 | CardID **\[ FK \]** |     | The unique number for each customer |
 | BookID **\[ FK \]** | Book ID | A unique number for each book in the library, even if it is a copy |
 | BorrowDate | Borrow Date  **(Start)** | Book borrow date  **(borrow Date)** |
