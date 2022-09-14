@@ -105,7 +105,7 @@ A bookID can be rented to one customer only.
 | BookID **\[ PK \]** | Book ID | A unique number for each book in the library, even if it is a copy |
 | BookISBN **\[ FK \]** | Book ISBN | A unique numeric commercial book identifier |
 | BranchID **\[  FK \]** | Branch ID | The number of the branch in which the customer's account was created |
-| BookStatus | Book Status | Information about book Status: Borrowed, In the Library, Lost, Damage |
+| BookStatus | Book Status | Information about book Status: Borrowed, Available, Lost, Damage |
 
 | **BookInfo** |     |     |
 | --- | --- | --- |
