@@ -1,10 +1,10 @@
-# Database-Library-System
-Database Library System
+# Database Library System
 
 ### Introduction
 
 The Database Library System is intended to Automate the library activities such as creating a new borrower, giving books to the borrowers, maintaining the details of all the item that were available in the books . This also helps the librarians by providing information such as total copies available each book, list of books that belong to a particular category (Short, Long Loan, Reference items, etc.).
 
+# Deliverable
 
 ### Deliverable 1:
 
@@ -21,17 +21,18 @@ The Database Library System is intended to Automate the library activities such 
 2. Apply advanced database concepts such as triggers to maintain data integrity, indexes, views, and procedures to improve system performance;
 3. There will be a project demonstration in the last week of the semester where students explain their work. Each group will have 15 minutes to demonstrate their database design
 
-### Diagram Links 
-Public Library – 3NF 
-https://app.quickdatabasediagrams.com/#/d/JV01Tr 
+# Diagram Links 
 
-Public Library - 2NF 
-https://app.quickdatabasediagrams.com/#/d/8Orn4g 
-
-Public Library – 1NF 
+1. Public Library – 1NF 
 https://app.quickdatabasediagrams.com/#/d/wRi0fv 
 
-### Business Rules 
+2. Public Library - 2NF 
+https://app.quickdatabasediagrams.com/#/d/8Orn4g 
+
+3. Public Library – 3NF 
+https://app.quickdatabasediagrams.com/#/d/JV01Tr 
+
+# Business Rules 
 1. Case 01
 The Maximum number of days allowed to borrow a book. 
 Business Rule
@@ -67,7 +68,8 @@ Book borrowing is available to all members
 Business Rule
 A bookID can be rented to one customer only.
 
-### Tables 
+# Tables 
+
 | **Attribute** | **Attribute Name** | **Attributes Description** |
 | --- | --- | --- |
 | **Customer Table** |||
@@ -81,8 +83,6 @@ A bookID can be rented to one customer only.
 | Phone | Phone Number | Phone or mobile Number |
 | BranchID | Branch ID | The number of the branch in which the customer's account was created |
 | NumBooksBorrowed | Num Books Borrowed | Number of books still borrowed by the customer |
-
-
 
 | **Borrow** |||
 | --- | --- | --- |
