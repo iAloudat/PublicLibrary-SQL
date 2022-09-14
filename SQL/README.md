@@ -5,7 +5,7 @@
 4. Don't Update or Add any code to PublicLibrary.sql File
 
 ### File Structure :
-PublichLibrary.sql -- Finale Version which will content everything
-Table.sql
-Rules.Sql
-Data.sql
+- PublichLibrary.sql -- Finale Version which will content everything
+- Table.sql
+- Rules.Sql
+- Data.sql
