@@ -1,9 +1,3 @@
-# Team Of Project
-IYAD ALOUDAT
-MOHAMMAD ALTAMIMI
-SIROOS RAHIMI TAGHANAKI
-DORIS CHAN YEW TONG-SUEN FA
-
 ### Notes
 1. The new codes or updates must be added first to your folder
 2. You must follow the same the structure for SQL folder when you want to work on any code
@@ -11,6 +5,7 @@ DORIS CHAN YEW TONG-SUEN FA
 4. Don't Update or Add any code to PublicLibrary.sql File
 
 ### File Structure :
+PublichLibrary.sql -- Finale Version which will content everything
 Table.sql
 Rules.Sql
 Data.sql

@@ -1,3 +1,8 @@
+/* ============ Database Library System Setup ============ */
+
+CREATE DATABASE PublicLibrary
+use PublicLibrary
+
 /* ======================= TABLES ======================== */
 
 CREATE TABLE Customer (
@@ -65,3 +70,7 @@ CREATE TABLE Authors (
     AuthorID    INT      NOT NULL PRIMARY KEY,
     AuthorName  VARCHAR(50)  NOT NULL 
 );
+
+/* ======================= Ruls ======================== */
+
+/* ======================= Data ======================== */
