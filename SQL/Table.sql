@@ -30,18 +30,18 @@ CREATE TABLE LibraryBranch (
 
 CREATE TABLE Book (
     BookID      Numeric(10,0)   NOT NULL  IDENTITY(1,1) PRIMARY KEY,
-    BookISBN    INT             NOT NULL FOREIGN KEY REFERENCES BookInfo(BookISBN),
+    BookISBN    Numeric(13,0)   NOT NULL FOREIGN KEY REFERENCES BookInfo(BookISBN),
     BranchID    INT             NOT NULL FOREIGN KEY REFERENCES LibraryBranch(BranchID),
-    BookStatus  VARCHAR(50)     NOT NULL
+    BookStatus  VARCHAR(12)     NOT NULL
 );
 
 CREATE TABLE BookInfo (
-    BookISBN        INT         NOT NULL PRIMARY KEY,
-    BookTitle       VARCHAR(50) NOT NULL ,
-    CategoryID      INT         NOT NULL FOREIGN KEY REFERENCES Categories(CategoryID),
-    PublisherID     INT         NOT NULL FOREIGN KEY REFERENCES Publisher(PublisherID),
-    NumberOfCopies  INT         NOT NULL ,
-    RackNum         INT         NOT NULL 
+    BookISBN        Numeric(13,0)   NOT NULL PRIMARY KEY,
+    BookTitle       VARCHAR(50)     NOT NULL ,
+    CategoryID      INT             NOT NULL FOREIGN KEY REFERENCES Categories(CategoryID),
+    PublisherID     INT             NOT NULL FOREIGN KEY REFERENCES Publisher(PublisherID),
+    NumberOfCopies  INT             NOT NULL ,
+    RackNum         INT             NOT NULL 
 );
 
 CREATE TABLE Categories (
