@@ -1,15 +1,4 @@
 # Database Library System
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-### Built With
-
-* [![SQL][Sql.sql]][SQL-url]
-
 
 ### Introduction
 
@@ -148,3 +137,4 @@ A bookID can be rented to one customer only.
 | --- | --- | --- |
 | AuthorID **\[ PK \]** | Author ID | The number of the author |
 | AuthorName | Author Name | The name of the author |
+
