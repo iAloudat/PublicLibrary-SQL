@@ -35,22 +35,22 @@ https://app.quickdatabasediagrams.com/#/d/JV01Tr
 # Business Rules 
 1. Case 01<br>
 The Maximum number of days allowed to borrow a book. <br>
-Business Rule<br>
+**Business Rule**<br>
 30 Days is the Maximum number of days allowed to borrow a book
 
 2. Case 02<br>
 The maximum number of borrowed books.<br>
-Business Rule<br>
+**Business Rule**<br>
 15 books is The maximum number of borrowed books.
 
 3. Case 03<br>
 Renew the book return due date <br>
-Business Rule<br>
+**Business Rule**<br>
 Customers can renew the book return due date twice only
 
 4. Case 04<br>
 Number of Publisher for every Book<br>
-Business Rule<br>
+**Business Rule**<br>
 Every Book Should have only one Publisher
 
 5. Case 05<br>
@@ -60,12 +60,12 @@ Each Branch should have at least 500 Books
 
 6. Case 06<br>
 Book borrowing is available to all members <br>
-Business Rule<br>
+**Business Rule**<br>
 A bookID can be rented to one customer only.
 
 7. Case 06<br>
 Book borrowing is available to all members <br>
-Business Rule<br>
+**Business Rule**<br>
 A bookID can be rented to one customer only.
 
 # Tables 
