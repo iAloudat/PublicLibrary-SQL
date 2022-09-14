@@ -1,8 +1,4 @@
-# Team Of Project
-IYAD ALOUDAT
-MOHAMMAD ALTAMIMI
-SIROOS RAHIMI TAGHANAKI
-DORIS CHAN YEW TONG-SUEN FA
+
 
 ### Notes
 1. The new codes or updates must be added first to your folder
@@ -14,3 +10,9 @@ DORIS CHAN YEW TONG-SUEN FA
 Table.sql
 Rules.Sql
 Data.sql
+
+### ProjectTeam
+- IYAD ALOUDAT
+- MOHAMMAD ALTAMIMI
+- SIROOS RAHIMI TAGHANAKI
+- DORIS CHAN YEW TONG-SUEN FA
