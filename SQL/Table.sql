@@ -1,5 +1,3 @@
-/* ======================= TABLES ======================== */
-
 CREATE TABLE Customer (
     CardID      Numeric(10,0)   NOT NULL IDENTITY(1000000000,1)  PRIMARY KEY,
     FirstName   VARCHAR(50)     NOT NULL,

@@ -27,32 +27,7 @@ insert into Customer (FirstName, LastName, gender, DateofBirth, Address, Phone) 
 insert into Customer (FirstName, LastName, gender, DateofBirth, Address, Phone) values ('Terrence', 'Chinnery', 'Male', '1974-02-01', '870 Mcbride Crossing', '3038466284');
 insert into Customer (FirstName, LastName, gender, DateofBirth, Address, Phone) values ('Sawyere', 'Heber', 'Male', '1979-07-01', '88903 Express Street', '5615716403');
 
-/* ## Borrow Table ### */
-insert into Borrow (CardID, BookID, BorrowDate) values (18, 9, '2022-05-12');
-insert into Borrow (CardID, BookID, BorrowDate) values (16, 13, '2022-03-22');
-insert into Borrow (CardID, BookID, BorrowDate) values (23, 15, '2022-05-28');
-insert into Borrow (CardID, BookID, BorrowDate) values (12, 9, '2021-11-01');
-insert into Borrow (CardID, BookID, BorrowDate) values (22, 10, '2022-08-20');
-insert into Borrow (CardID, BookID, BorrowDate) values (8, 7, '2021-10-22');
-insert into Borrow (CardID, BookID, BorrowDate) values (5, 12, '2021-12-18');
-insert into Borrow (CardID, BookID, BorrowDate) values (8, 3, '2022-09-09');
-insert into Borrow (CardID, BookID, BorrowDate) values (21, 8, '2022-07-26');
-insert into Borrow (CardID, BookID, BorrowDate) values (10, 7, '2022-07-14');
-insert into Borrow (CardID, BookID, BorrowDate) values (1, 18, '2022-06-05');
-insert into Borrow (CardID, BookID, BorrowDate) values (14, 4, '2022-08-19');
-insert into Borrow (CardID, BookID, BorrowDate) values (20, 9, '2022-09-10');
-insert into Borrow (CardID, BookID, BorrowDate) values (1, 3, '2022-08-16');
-insert into Borrow (CardID, BookID, BorrowDate) values (9, 8, '2021-09-29');
-insert into Borrow (CardID, BookID, BorrowDate) values (21, 14, '2022-01-29');
-insert into Borrow (CardID, BookID, BorrowDate) values (14, 10, '2022-05-12');
-insert into Borrow (CardID, BookID, BorrowDate) values (24, 12, '2021-10-28');
-insert into Borrow (CardID, BookID, BorrowDate) values (8, 13, '2022-04-08');
-insert into Borrow (CardID, BookID, BorrowDate) values (25, 4, '2022-07-26');
-insert into Borrow (CardID, BookID, BorrowDate) values (18, 5, '2021-12-09');
-insert into Borrow (CardID, BookID, BorrowDate) values (6, 9, '2022-07-30');
-insert into Borrow (CardID, BookID, BorrowDate) values (4, 12, '2022-07-03');
-insert into Borrow (CardID, BookID, BorrowDate) values (14, 18, '2021-11-01');
-insert into Borrow (CardID, BookID, BorrowDate) values (23, 8, '2022-08-16');
+GO
 
 /* ## LibraryBranch ### */
 insert into LibraryBranch (BranchName, BranchAddress) values ('Fixflex', '171 New Castle Crossing');
@@ -65,6 +40,105 @@ insert into LibraryBranch (BranchName, BranchAddress) values ('Y-find', '5 Decla
 insert into LibraryBranch (BranchName, BranchAddress) values ('Toughjoyfax', '2 Tony Parkway');
 insert into LibraryBranch (BranchName, BranchAddress) values ('Flowdesk', '76 Prairie Rose Park');
 insert into LibraryBranch (BranchName, BranchAddress) values ('Prodder', '34 Basil Parkway');
+
+GO
+
+/* ## Categories ### */
+insert into Categories (CategoryName) values ('Action and Adventure');
+insert into Categories (CategoryName) values ('Classics');
+insert into Categories (CategoryName) values ('Detective and Mystery');
+insert into Categories (CategoryName) values ('Fantasy');
+insert into Categories (CategoryName) values ('History');
+insert into Categories (CategoryName) values ('Horror');
+insert into Categories (CategoryName) values ('Romance');
+insert into Categories (CategoryName) values ('Science Fiction');
+insert into Categories (CategoryName) values ('Short Stories');
+insert into Categories (CategoryName) values ('Suspense and Thrillers');
+
+GO
+
+/* ## Publisher ### */
+insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Hahn LLC', '9 Mariners Cove Road', '6645971159');
+insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Metz, Hilll and Goldner', '133 Di Loreto Center', '3799469540');
+insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Gleichner-Prosacco', '89497 Mayer Road', '7841788872');
+insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Cruickshank-Windler', '75 High Crossing Road', '6715799599');
+insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Predovic Inc', '79 Oneill Parkway', '2139437592');
+insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Nolan, Cole and Schumm', '654 Paget Circle', '8259116693');
+insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Von, Hegmann and Christiansen', '7825 Arizona Crossing', '2643801942');
+insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Bartell-Tremblay', '93050 Towne Street', '8203939792');
+insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Leannon, Bashirian and Murazik', '0503 Sugar Parkway', '9244176506');
+insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Wunsch-Denesik', '7 Hallows Court', '6806396237');
+insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Robel, Simonis and Friesen', '846 Drewry Pass', '2054176769');
+insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Grant Inc', '200 Katie Hill', '2413807427');
+insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('West, Greenholt and Simonis', '51 Little Fleur Terrace', '5467642247');
+insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Lemke-Predovic', '105 American Ash Avenue', '3905409744');
+insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Thiel, Hintz and Kulas', '42107 Weeping Birch Way', '2027579172');
+insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Gleichner, Cronin and Heaney', '36 Meadow Valley Plaza', '8246181254');
+insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Ratke and Sons', '45713 Buhler Hill', '3328772359');
+insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Little, Doyle and Roberts', '193 Lakewood Gardens Crossing', '6997922933');
+insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Howe-Ortiz', '90 Cherokee Drive', '7081463715');
+insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Ernser Group', '36 Maple Wood Circle', '4893183966');
+insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Bashirian, Carroll and Cormier', '7014 Starling Terrace', '7569295354');
+insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Rodriguez Inc', '40413 Anthes Avenue', '1196334374');
+insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Wintheiser LLC', '5263 Bluestem Trail', '6818485152');
+insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Walker-Powlowski', '9088 American Street', '1029363403');
+insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Aufderhar Group', '3 Hayes Court', '2582924077');
+
+GO
+
+/* ## BookInfo ### */
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (2783161484, 'Introduction to Algorithms', 2, 21, 1, 81);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (2921571537, 'The C Programming Language', 2, 16, 1, 5);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (3059981591, 'Big Data Big Challenges', 15, 16, 1, 52);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (3198391644, 'Designing Data', 19, 22, 1, 75);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (3336801698, 'Here Comes Peter Cottontail ', 10, 8, 1, 29);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (3475211752, 'Thomas Crown Affair, The', 4, 19, 1, 47);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (3613621805, 'At Sword''s Point', 2, 9, 1, 4);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (3752031859, 'Weary River', 6, 16, 1, 5);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (3890441912, 'Fatty Drives the Bus', 9, 4, 1, 7);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (4028851966, 'Young & Beautiful', 10, 9, 1, 26);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (4167262020, 'Bag of Hammers, A', 8, 11, 1, 8);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (4305672073, 'Animals United', 2, 14, 1, 32);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (4444082127, 'There Will Be Blood', 10, 10, 1, 42);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (4582492180, 'Ski Patrol', 7, 4, 1, 29);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (4720902234, 'Thousand Words, A', 5, 17, 1, 49);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (4859312288, 'Ragamuffin', 7, 20, 1, 37);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (4997722341, 'Hyde Park on Hudson', 3, 7, 1, 15);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (5136132395, 'Good Job:  Stories of the FDNY, A', 6, 22, 1, 2);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (5274542448, 'Ishaqzaade', 1, 18, 1, 15);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (5412952502, 'Blind (Beul-la-in-deu)', 4, 10, 1, 6);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (5551362556, 'Taxi Blues', 4, 17, 1, 29);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (5689772609, 'Dead Silence', 10, 2, 1, 27);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (5828182663, 'Bat, The', 6, 11, 1, 48);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (5966592716, 'Choices', 7, 16, 1, 14);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (6105002770, 'Babysitter, The', 2, 6, 1, 9);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (6243412824, 'Alfie', 6, 12, 1, 24);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (6381822877, 'Ordinary Decent Criminal', 2, 4, 1, 17);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (6520232931, 'Honeymoon', 3, 24, 1, 6);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (6658642984, '388 Arletta Avenue', 8, 4, 1, 19);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (6797053038, 'Taira Clan Saga, The (Shin heike monogatari)', 5, 6, 1, 44);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (6935463092, 'Restraint', 1, 22, 1, 25);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (7073873145, 'Pajama Party', 9, 3, 1, 6);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (7212283199, 'Sport, Sport, Sport', 7, 24, 1, 2);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (7350693252, 'Beethoven''s 5th', 1, 8, 1, 4);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (7489103306, 'Trial by Jury', 2, 5, 1, 33);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (7627513360, 'Stolen Seas', 9, 19, 1, 50);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (7765923413, 'Marathon Family, The (Maratonci Trce Pocasni Krug)', 4, 9, 1, 30);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (7904333467, 'Burn, Witch, Burn (Night of the Eagle)', 3, 11, 1, 17);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (8042743520, 'The Hire: Star, The', 7, 6, 1, 8);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (8181153574, 'Judith of Bethulia', 1, 18, 1, 9);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (8319563628, 'Bolero', 10, 10, 1, 15);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (8457973681, 'Dead Man''s Walk', 4, 25, 1, 20);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (8596383735, 'Secret Agent, The', 3, 12, 1, 29);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (8734793788, 'Iron Island (Jazireh Ahani)', 7, 12, 1, 11);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (8873203842, 'Teen Spirit', 9, 18, 1, 40);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (9011613896, 'Most Wanted Man, A', 2, 22, 1, 9);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (9150023949, 'Snowriders', 9, 25, 1, 32);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (9288434003, 'War on Democracy, The', 5, 10, 1, 15);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (9426844056, 'Road to Zanzibar', 1, 5, 1, 8);
+insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (9565254110, 'Inconvenient Tax, An', 2, 13, 1, 33);
+
+GO
 
 /* ## Book ### */
 insert into Book (BookISBN, BranchID, BookStatus) values (2783161484, 10, 'Available');
@@ -118,99 +192,63 @@ insert into Book (BookISBN, BranchID, BookStatus) values (9288434003, 7, 'Borrow
 insert into Book (BookISBN, BranchID, BookStatus) values (9426844056, 10, 'Available');
 insert into Book (BookISBN, BranchID, BookStatus) values (9565254110, 2, 'Available');
 
-/* ## BookInfo ### */
+GO
+/* ## Borrow Table ### */
+insert into Borrow (CardID, BookID, BorrowDate) values (18, 1, '2022-05-12');
+insert into Borrow (CardID, BookID, BorrowDate) values (16, 13, '2022-03-22');
+insert into Borrow (CardID, BookID, BorrowDate) values (23, 15, '2022-05-28');
+insert into Borrow (CardID, BookID, BorrowDate) values (12, 9, '2021-11-01');
+insert into Borrow (CardID, BookID, BorrowDate) values (22, 10, '2022-08-20');
+insert into Borrow (CardID, BookID, BorrowDate) values (8, 7, '2021-10-22');
+insert into Borrow (CardID, BookID, BorrowDate) values (5, 12, '2021-12-18');
+insert into Borrow (CardID, BookID, BorrowDate) values (8, 3, '2022-09-09');
+insert into Borrow (CardID, BookID, BorrowDate) values (21, 8, '2022-07-26');
+insert into Borrow (CardID, BookID, BorrowDate) values (10, 7, '2022-07-14');
+insert into Borrow (CardID, BookID, BorrowDate) values (1, 18, '2022-06-05');
+insert into Borrow (CardID, BookID, BorrowDate) values (14, 4, '2022-08-19');
+insert into Borrow (CardID, BookID, BorrowDate) values (20, 9, '2022-09-10');
+insert into Borrow (CardID, BookID, BorrowDate) values (1, 3, '2022-08-16');
+insert into Borrow (CardID, BookID, BorrowDate) values (9, 8, '2021-09-29');
+insert into Borrow (CardID, BookID, BorrowDate) values (21, 14, '2022-01-29');
+insert into Borrow (CardID, BookID, BorrowDate) values (14, 10, '2022-05-12');
+insert into Borrow (CardID, BookID, BorrowDate) values (24, 12, '2021-10-28');
+insert into Borrow (CardID, BookID, BorrowDate) values (8, 13, '2022-04-08');
+insert into Borrow (CardID, BookID, BorrowDate) values (25, 4, '2022-07-26');
+insert into Borrow (CardID, BookID, BorrowDate) values (18, 5, '2021-12-09');
+insert into Borrow (CardID, BookID, BorrowDate) values (6, 9, '2022-07-30');
+insert into Borrow (CardID, BookID, BorrowDate) values (4, 12, '2022-07-03');
+insert into Borrow (CardID, BookID, BorrowDate) values (14, 18, '2021-11-01');
+insert into Borrow (CardID, BookID, BorrowDate) values (23, 8, '2022-08-16');
 
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (2783161484, 'Introduction to Algorithms', 2, 21, 1, 81);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (2921571537, 'The C Programming Language', 2, 16, 1, 5);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (3059981591, 'Big Data Big Challenges', 15, 16, 1, 52);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (3198391644, 'Designing Data', 19, 22, 1, 75);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (3336801698, 'Here Comes Peter Cottontail ', 10, 8, 1, 29);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (3475211752, 'Thomas Crown Affair, The', 4, 19, 1, 47);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (3613621805, 'At Sword''s Point', 2, 9, 1, 4);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (3752031859, 'Weary River', 6, 16, 1, 5);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (3890441912, 'Fatty Drives the Bus', 9, 4, 1, 7);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (4028851966, 'Young & Beautiful', 10, 9, 1, 26);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (4167262020, 'Bag of Hammers, A', 8, 11, 1, 8);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (4305672073, 'Animals United', 2, 14, 1, 32);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (4444082127, 'There Will Be Blood', 10, 10, 1, 42);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (4582492180, 'Ski Patrol', 7, 4, 1, 29);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (4720902234, 'Thousand Words, A', 5, 17, 1, 49);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (4859312288, 'Ragamuffin', 7, 20, 1, 37);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (4997722341, 'Hyde Park on Hudson', 3, 7, 1, 15);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (5136132395, 'Good Job:  Stories of the FDNY, A', 6, 22, 1, 2);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (5274542448, 'Ishaqzaade', 1, 18, 1, 15);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (5412952502, 'Blind (Beul-la-in-deu)', 4, 10, 1, 6);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (5551362556, 'Taxi Blues', 4, 17, 1, 29);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (5689772609, 'Dead Silence', 10, 2, 1, 27);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (5828182663, 'Bat, The', 6, 11, 1, 48);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (5966592716, 'Choices', 7, 16, 1, 14);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (6105002770, 'Babysitter, The', 2, 6, 1, 9);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (6243412824, 'Alfie', 6, 12, 1, 24);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (6381822877, 'Ordinary Decent Criminal', 2, 4, 1, 17);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (6520232931, 'Honeymoon', 3, 24, 1, 6);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (6658642984, '388 Arletta Avenue', 8, 4, 1, 19);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (6797053038, 'Taira Clan Saga, The (Shin heike monogatari)', 5, 6, 1, 44);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (6935463092, 'Restraint', 1, 22, 1, 25);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (7073873145, 'Pajama Party', 9, 3, 1, 6);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (7212283199, 'Sport, Sport, Sport', 7, 24, 1, 2);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (7350693252, 'Beethoven''s 5th', 1, 8, 1, 4);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (7489103306, 'Trial by Jury', 2, 5, 1, 33);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (7627513360, 'Stolen Seas', 9, 19, 1, 50);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (7765923413, 'Marathon Family, The (Maratonci Trce Pocasni Krug)', 4, 9, 1, 30);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (7904333467, 'Burn, Witch, Burn (Night of the Eagle)', 3, 11, 1, 17);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (8042743520, 'The Hire: Star, The', 7, 6, 1, 8);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (8181153574, 'Judith of Bethulia', 1, 18, 1, 9);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (8319563628, 'Bolero', 10, 10, 1, 15);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (8457973681, 'Dead Man''s Walk', 4, 25, 1, 20);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (8596383735, 'Secret Agent, The', 3, 12, 1, 29);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (8734793788, 'Iron Island (Jazireh Ahani)', 7, 12, 1, 11);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (8873203842, 'Teen Spirit', 9, 18, 1, 40);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (9011613896, 'Most Wanted Man, A', 2, 22, 1, 9);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (9150023949, 'Snowriders', 9, 25, 1, 32);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (9288434003, 'War on Democracy, The', 5, 10, 1, 15);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (9426844056, 'Road to Zanzibar', 1, 5, 1, 8);
-insert into BookInfo (BookISBN, BookTitle, CategoryID, PublisherID, NumberOfCopies, RackNum) values (9565254110, 'Inconvenient Tax, An', 2, 13, 1, 33);
+GO
+/* ## Authors ### */
+insert into Authors (AuthorName) values ('Roma Astlatt');
+insert into Authors (AuthorName) values ('Doris Crossby');
+insert into Authors (AuthorName) values ('Joscelin Heape');
+insert into Authors (AuthorName) values ('Timi Laroux');
+insert into Authors (AuthorName) values ('Allard Kadd');
+insert into Authors (AuthorName) values ('Angelina Gillingham');
+insert into Authors (AuthorName) values ('Mora Paulon');
+insert into Authors (AuthorName) values ('Koral Pittway');
+insert into Authors (AuthorName) values ('Jacobo Dauber');
+insert into Authors (AuthorName) values ('Penelopa Dewire');
+insert into Authors (AuthorName) values ('Aeriel Fentem');
+insert into Authors (AuthorName) values ('Andrej Geeve');
+insert into Authors (AuthorName) values ('Ambrosi Pirouet');
+insert into Authors (AuthorName) values ('Elmo Forrest');
+insert into Authors (AuthorName) values ('Willy Oleszcuk');
+insert into Authors (AuthorName) values ('Marga Defond');
+insert into Authors (AuthorName) values ('Victoir Spellacey');
+insert into Authors (AuthorName) values ('Mallory Rutledge');
+insert into Authors (AuthorName) values ('Freemon Kightly');
+insert into Authors (AuthorName) values ('Tracy Routledge');
+insert into Authors (AuthorName) values ('Brantley Kinny');
+insert into Authors (AuthorName) values ('Lyndsay Brimilcombe');
+insert into Authors (AuthorName) values ('Ivie Straw');
+insert into Authors (AuthorName) values ('Bobbie Bestar');
+insert into Authors (AuthorName) values ('Sarette Andrioletti');
 
-
-/* ## Categories ### */
-insert into Categories (CategoryName) values ('Action and Adventure');
-insert into Categories (CategoryName) values ('Classics');
-insert into Categories (CategoryName) values ('Detective and Mystery');
-insert into Categories (CategoryName) values ('Fantasy');
-insert into Categories (CategoryName) values ('History');
-insert into Categories (CategoryName) values ('Horror');
-insert into Categories (CategoryName) values ('Romance');
-insert into Categories (CategoryName) values ('Science Fiction');
-insert into Categories (CategoryName) values ('Short Stories');
-insert into Categories (CategoryName) values ('Suspense and Thrillers');
-
-/* ## Publisher ### */
-insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Hahn LLC', '9 Mariners Cove Road', '6645971159');
-insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Metz, Hilll and Goldner', '133 Di Loreto Center', '3799469540');
-insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Gleichner-Prosacco', '89497 Mayer Road', '7841788872');
-insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Cruickshank-Windler', '75 High Crossing Road', '6715799599');
-insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Predovic Inc', '79 Oneill Parkway', '2139437592');
-insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Nolan, Cole and Schumm', '654 Paget Circle', '8259116693');
-insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Von, Hegmann and Christiansen', '7825 Arizona Crossing', '2643801942');
-insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Bartell-Tremblay', '93050 Towne Street', '8203939792');
-insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Leannon, Bashirian and Murazik', '0503 Sugar Parkway', '9244176506');
-insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Wunsch-Denesik', '7 Hallows Court', '6806396237');
-insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Robel, Simonis and Friesen', '846 Drewry Pass', '2054176769');
-insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Grant Inc', '200 Katie Hill', '2413807427');
-insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('West, Greenholt and Simonis', '51 Little Fleur Terrace', '5467642247');
-insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Lemke-Predovic', '105 American Ash Avenue', '3905409744');
-insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Thiel, Hintz and Kulas', '42107 Weeping Birch Way', '2027579172');
-insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Gleichner, Cronin and Heaney', '36 Meadow Valley Plaza', '8246181254');
-insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Ratke and Sons', '45713 Buhler Hill', '3328772359');
-insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Little, Doyle and Roberts', '193 Lakewood Gardens Crossing', '6997922933');
-insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Howe-Ortiz', '90 Cherokee Drive', '7081463715');
-insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Ernser Group', '36 Maple Wood Circle', '4893183966');
-insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Bashirian, Carroll and Cormier', '7014 Starling Terrace', '7569295354');
-insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Rodriguez Inc', '40413 Anthes Avenue', '1196334374');
-insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Wintheiser LLC', '5263 Bluestem Trail', '6818485152');
-insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Walker-Powlowski', '9088 American Street', '1029363403');
-insert into Publisher (PublisherName, PublisherAddress, PublisherPhone) values ('Aufderhar Group', '3 Hayes Court', '2582924077');
-
+GO
 /* ## BookAuthors ### */
 insert into BookAuthors (AuthorsID, BookISBN) values (24, 2783161484);
 insert into BookAuthors (AuthorsID, BookISBN) values (21, 2921571537);
@@ -262,32 +300,6 @@ insert into BookAuthors (AuthorsID, BookISBN) values (7, 9150023949);
 insert into BookAuthors (AuthorsID, BookISBN) values (22, 9288434003);
 insert into BookAuthors (AuthorsID, BookISBN) values (15, 9426844056);
 insert into BookAuthors (AuthorsID, BookISBN) values (24, 9565254110);
-# Rows:
 
 
-/* ## Authors ### */
-insert into Authors (AuthorName) values ('Roma Astlatt');
-insert into Authors (AuthorName) values ('Doris Crossby');
-insert into Authors (AuthorName) values ('Joscelin Heape');
-insert into Authors (AuthorName) values ('Timi Laroux');
-insert into Authors (AuthorName) values ('Allard Kadd');
-insert into Authors (AuthorName) values ('Angelina Gillingham');
-insert into Authors (AuthorName) values ('Mora Paulon');
-insert into Authors (AuthorName) values ('Koral Pittway');
-insert into Authors (AuthorName) values ('Jacobo Dauber');
-insert into Authors (AuthorName) values ('Penelopa Dewire');
-insert into Authors (AuthorName) values ('Aeriel Fentem');
-insert into Authors (AuthorName) values ('Andrej Geeve');
-insert into Authors (AuthorName) values ('Ambrosi Pirouet');
-insert into Authors (AuthorName) values ('Elmo Forrest');
-insert into Authors (AuthorName) values ('Willy Oleszcuk');
-insert into Authors (AuthorName) values ('Marga Defond');
-insert into Authors (AuthorName) values ('Victoir Spellacey');
-insert into Authors (AuthorName) values ('Mallory Rutledge');
-insert into Authors (AuthorName) values ('Freemon Kightly');
-insert into Authors (AuthorName) values ('Tracy Routledge');
-insert into Authors (AuthorName) values ('Brantley Kinny');
-insert into Authors (AuthorName) values ('Lyndsay Brimilcombe');
-insert into Authors (AuthorName) values ('Ivie Straw');
-insert into Authors (AuthorName) values ('Bobbie Bestar');
-insert into Authors (AuthorName) values ('Sarette Andrioletti');
+
