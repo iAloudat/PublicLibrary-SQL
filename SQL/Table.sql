@@ -10,38 +10,10 @@ CREATE TABLE Customer (
     Phone       Numeric(10,0)   NOT NULL   
 );
 
-
-CREATE TABLE Borrow (
-    BorrowID        INT             NOT NULL IDENTITY(1,1) PRIMARY KEY, 
-    CardID          Numeric(10,0)   NOT NULL FOREIGN KEY REFERENCES Customer(CardID),
-    BookID          Numeric(10,0)   NOT NULL FOREIGN KEY REFERENCES Book(BookID),
-    BorrowDate      DATE            NOT NULL ,
-    RenewedNum      INT                 NULL CHECK(RenewedNum <= 2), -- Case 03
-    RenewDate       DATE                NULL ,
-    ReturnDueDate   DATE                NULL 
-);
-
-
 CREATE TABLE LibraryBranch (
     BranchID        INT         NOT NULL IDENTITY(1,1) PRIMARY KEY,
     BranchName      VARCHAR(50) NOT NULL ,
     BranchAddress   VARCHAR(50) NOT NULL 
-);
-
-CREATE TABLE Book (
-    BookID      Numeric(10,0)   NOT NULL  IDENTITY(1,1) PRIMARY KEY,
-    BookISBN    Numeric(13,0)   NOT NULL FOREIGN KEY REFERENCES BookInfo(BookISBN),
-    BranchID    INT             NOT NULL FOREIGN KEY REFERENCES LibraryBranch(BranchID),
-    BookStatus  VARCHAR(12)     NOT NULL
-);
-
-CREATE TABLE BookInfo (
-    BookISBN        Numeric(13,0)   NOT NULL PRIMARY KEY,
-    BookTitle       VARCHAR(50)     NOT NULL ,
-    CategoryID      INT             NOT NULL FOREIGN KEY REFERENCES Categories(CategoryID),
-    PublisherID     INT             NOT NULL FOREIGN KEY REFERENCES Publisher(PublisherID),
-    NumberOfCopies  INT             NOT NULL ,
-    RackNum         INT             NOT NULL 
 );
 
 CREATE TABLE Categories (
@@ -56,12 +28,41 @@ CREATE TABLE Publisher (
     PublisherPhone      Numeric(10,0)   NOT NULL 
 );
 
-CREATE TABLE BookAuthors (
-    AuthorsID   INT  NOT NULL FOREIGN KEY REFERENCES Authors(AuthorsID),
-    BookISBN    INT  NOT NULL FOREIGN KEY REFERENCES BookInfo(BookISBN)
+CREATE TABLE BookInfo (
+    BookISBN        Numeric(13,0)   NOT NULL PRIMARY KEY,
+    BookTitle       VARCHAR(50)     NOT NULL ,
+    CategoryID      INT             NOT NULL FOREIGN KEY REFERENCES Categories(CategoryID),
+    PublisherID     INT             NOT NULL FOREIGN KEY REFERENCES Publisher(PublisherID),
+    NumberOfCopies  INT             NOT NULL ,
+    RackNum         INT             NOT NULL 
 );
+
+CREATE TABLE Book (
+    BookID      Numeric(10,0)   NOT NULL  IDENTITY(1,1) PRIMARY KEY,
+    BookISBN    Numeric(13,0)   NOT NULL FOREIGN KEY REFERENCES BookInfo(BookISBN),
+    BranchID    INT             NOT NULL FOREIGN KEY REFERENCES LibraryBranch(BranchID),
+    BookStatus  VARCHAR(12)     NOT NULL
+);
+
+CREATE TABLE Borrow (
+    BorrowID        INT             NOT NULL IDENTITY(1,1) PRIMARY KEY, 
+    CardID          Numeric(10,0)   NOT NULL FOREIGN KEY REFERENCES Customer(CardID),
+    BookID          Numeric(10,0)   NOT NULL FOREIGN KEY REFERENCES Book(BookID),
+    BorrowDate      DATE            NOT NULL ,
+    RenewedNum      INT                 NULL CHECK(RenewedNum <= 2), -- Case 03
+    RenewDate       DATE                NULL ,
+    ReturnDueDate   DATE                NULL 
+);
+
+
+
 
 CREATE TABLE Authors (
     AuthorID    INT          NOT NULL IDENTITY(1,1) PRIMARY KEY,
     AuthorName  VARCHAR(50)  NOT NULL 
+);
+
+CREATE TABLE BookAuthors (
+    AuthorsID   INT  NOT NULL FOREIGN KEY REFERENCES Authors(AuthorID),
+    BookISBN    Numeric(13,0)  NOT NULL FOREIGN KEY REFERENCES BookInfo(BookISBN)
 );
