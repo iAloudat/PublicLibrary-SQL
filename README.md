@@ -85,15 +85,17 @@ Each branch must have enough books to borrow<br>
 Business Rule<br>
 Each Branch should have at least 500 Books
 
-6. Case 06<br>
-Book borrowing is available to all members <br>
-**Business Rule**<br>
-A bookID can be rented to one customer only.
 
-7. Case 07<br>
+7. Case 06<br>
 Book borrowing is available to all members <br>
 **Business Rule**<br>
 A book can be borrowed if available only.
+
+7. Case 07<br>
+Every BookISBN should have one author at least in Book Authors Table<br>
+**Business Rule**<br>
+At Book Authors Table, AuthorsID and BookISB Should not be Null<br>
+
 
 8. Case 08<br>
 ????? <br>
