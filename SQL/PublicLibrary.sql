@@ -74,7 +74,7 @@ CREATE TABLE Authors (
 GO
 
 CREATE TABLE BookAuthors (
-    AuthorsID   INT  NOT NULL,
+    AuthorID   INT  NOT NULL,
     BookISBN    Numeric(10,0)  NOT NULL
 );
 GO
@@ -119,16 +119,16 @@ REFERENCES Book(BookID);
 GO
 
 ALTER TABLE BookAuthors 
+ADD CONSTRAINT FK_BookISBN_BookAuthors 
+FOREIGN KEY(BookISBN)
+REFERENCES BookInfo(BookISBN);
+GO
+
+ALTER TABLE BookAuthors 
 ADD CONSTRAINT FK_AuthorID_BookAuthors 
 FOREIGN KEY(AuthorID)
 REFERENCES Authors(AuthorID);
 GO
-
-ALTER TABLE BookAuthors 
-ADD CONSTRAINT FK_BookISBN_BookAuthors 
-FOREIGN KEY(BookISBN)
-REFERENCES BookInfo(BookISBN);
-
 
 /* ======================= Ruls ======================== */
 

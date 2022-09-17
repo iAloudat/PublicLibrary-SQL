@@ -2,6 +2,7 @@
 --  Drop
 DROP DATABASE [PublicLibrary];
 GO
+
 -- Create Data
 CREATE DATABASE PublicLibrary;
 GO
