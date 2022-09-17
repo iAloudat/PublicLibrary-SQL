@@ -71,6 +71,7 @@ CREATE TABLE BookAuthors (
     BookISBN    Numeric(10,0)  NOT NULL
 );
 GO
+/* ======================= FK ======================== */
 
 ALTER TABLE BookInfo 
 ADD CONSTRAINT FK_CategoryID_BookInfo 

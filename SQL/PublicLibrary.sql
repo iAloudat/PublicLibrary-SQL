@@ -79,6 +79,8 @@ CREATE TABLE BookAuthors (
 );
 GO
 
+/* ======================= FK ======================== */
+
 ALTER TABLE BookInfo 
 ADD CONSTRAINT FK_CategoryID_BookInfo 
 FOREIGN KEY(CategoryID)
