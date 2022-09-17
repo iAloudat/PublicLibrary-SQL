@@ -7,9 +7,9 @@
 4. Don't Update or Add any code to PublicLibrary.sql File
 
 ### File Structure :
-Table.sql
-Rules.Sql
-Data.sql
+- Table.sql
+- Rules.Sql
+- Data.sql
 
 ### ProjectTeam
 - IYAD ALOUDAT
