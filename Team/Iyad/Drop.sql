@@ -1,6 +1,6 @@
 
 --  Drop
-DROP DATABASE [PublicLibrary];
+DROP DATABASE PublicLibrary;
 GO
 
 -- Create Data
@@ -13,8 +13,8 @@ GO
 
 use [master];
 GO
-ALTER DATABASE [PublicLibrary] SET OFFLINE WITH ROLLBACK IMMEDIATE;
+ALTER DATABASE PublicLibrary SET OFFLINE WITH ROLLBACK IMMEDIATE;
 GO
-ALTER DATABASE [PublicLibrary] SET ONLINE;
+ALTER DATABASE PublicLibrary SET ONLINE;
 GO
 DROP DATABASE PublicLibrary;
