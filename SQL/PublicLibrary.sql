@@ -1,3 +1,18 @@
+/* ============ Introduction============ 
+Team:
+IYAD ALOUDAT
+MOHAMMAD ALTAMIMI
+SIROOS RAHIMI TAGHANAKI 
+DORIS CHAN YEW TONG-SUEN FA
+
+This File will Create Database, Table, Rules, and Data Records by Following the step below
+- Create DataBase Name PublicLibrary
+- Create Tables
+- Create FOREIGN KEY 
+- Create FOREIGN Rules 
+- Create Data Records
+*/
+
 /* ============ Database Library System Setup ============ */
 CREATE DATABASE PublicLibrary;
 GO
@@ -79,7 +94,7 @@ CREATE TABLE BookAuthors (
 );
 GO
 
-/* ======================= FK ======================== */
+/* ======================= FOREIGN KEY : FK ======================== */
 
 ALTER TABLE BookInfo 
 ADD CONSTRAINT FK_CategoryID_BookInfo 
@@ -132,7 +147,36 @@ GO
 
 /* ======================= Ruls ======================== */
 
-/* ======================= Data ======================== */
+-- Case 01: 30 Days is the Maximum number of days allowed to borrow a book
+ALTER TABLE Borrow 
+ADD CHECK((ReturnDueDate-BorrowDate)<31);
+GO
+-- Case 02: >>>> Pleace check File Rules.sql
+
+
+-- Case 03: Customers can renew the book return due date twice only
+ALTER TABLE Borrow 
+ADD CHECK((RenewedNum)<3);
+
+
+-- Case 04: Every Book Should have only one Publisher
+-- #######  Added in FOREIGN KEY ########
+
+-- Case 05: >>>> Pleace check File Rules.sql
+
+-- Case 06: >>>> Pleace check File Rules.sql
+
+
+-- Case 07: At Book Authors Table, AuthorsID and BookISB Should not be Null
+-- #######  Added in Table ########
+
+
+-- Case 08: Each customer should be born before 2020
+ALTER TABLE Borrow 
+ADD CHECK(DateofBirth<'2020-01-01');
+
+
+/* ======================= Data Records ======================== */
 
 /* ## Customer Table ### */
 insert into Customer (FirstName, LastName, gender, DateofBirth, Address, Phone) 
@@ -452,6 +496,3 @@ values
 (22, 9288434003),
 (15, 9426844056),
 (24, 9565254110);
-
-
-

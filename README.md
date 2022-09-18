@@ -98,10 +98,9 @@ At Book Authors Table, AuthorsID and BookISB Should not be Null<br>
 
 
 8. Case 08<br>
-????? <br>
+Each one can be a customer <br>
 **Business Rule**<br>
-?????.
-
+Each customer should be born before 2020.
 
 # Tables 
 
