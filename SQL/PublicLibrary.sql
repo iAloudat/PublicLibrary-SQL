@@ -9,8 +9,8 @@ This File will Create Database, Table, Rules, and Data Records by Following the 
 - Create DataBase Name PublicLibrary
 - Create Tables
 - Create FOREIGN KEY 
-- Create Rules (Some of the rules in this file and the other in Rules.SQL)
 - Add Data Records
+- Create Rules
 */
 
 /* ============ Database Library System Setup ============ */
@@ -145,38 +145,6 @@ FOREIGN KEY(AuthorID)
 REFERENCES Authors(AuthorID);
 GO
 
-/* ======================= Rules ======================== */
--- Case 01: 30 Days is the Maximum number of days allowed to borrow a book
-ALTER TABLE Borrow 
-ADD CHECK((DATEDIFF(year,ReturnDueDate,BorrowDate))<31);
-GO
-
--- Case 02:
--- #######  Pleace check File Rules.sql ########
-
--- Case 03: Customers can renew the book return due date twice only
-ALTER TABLE Borrow 
-ADD CHECK((RenewedNum)<3);
-GO
-
--- Case 04: Every Book Should have only one Publisher
--- #######  Added in FOREIGN KEY ########
-
--- Case 05:
--- #######  Pleace check File Rules.sql ########
-
--- Case 06:
--- #######  Pleace check File Rules.sql ########
-
-
--- Case 07: At Book Authors Table, AuthorsID and BookISB Should not be Null
--- #######  Added in Table ########
-
-
--- Case 08: Each customer should be born before 2020
-ALTER TABLE Customer 
-ADD CHECK(DateofBirth<'2020-01-01');
-GO
 
 /* ======================= Data Records ======================== */
 
@@ -385,34 +353,35 @@ values
 (9565254110, 2, 'Available');
 
 GO
+
 /* ## Borrow Table ### */
-insert into Borrow (CardID, BookID, BorrowDate) 
+insert into Borrow (CardID, BookID, BorrowDate, ReturnDueDate, RenewedNum) 
 values 
-(1000000018, 1, '2022-05-12'),
-(1000000016, 13, '2022-03-22'),
-(1000000023, 15, '2022-05-28'),
-(1000000012, 9, '2021-11-01'),
-(1000000022, 10, '2022-08-20'),
-(1000000008, 7, '2021-10-22'),
-(1000000005, 12, '2021-12-18'),
-(1000000008, 3, '2022-09-09'),
-(1000000021, 8, '2022-07-26'),
-(1000000010, 7, '2022-07-14'),
-(1000000001, 18, '2022-06-05'),
-(1000000014, 4, '2022-08-19'),
-(1000000020, 9, '2022-09-10'),
-(1000000001, 3, '2022-08-16'),
-(1000000009, 8, '2021-09-29'),
-(1000000021, 14, '2022-01-29'),
-(1000000014, 10, '2022-05-12'),
-(1000000024, 12, '2021-10-28'),
-(1000000008, 13, '2022-04-08'),
-(1000000002, 4, '2022-07-26'),
-(1000000018, 5, '2021-12-09'),
-(1000000006, 9, '2022-07-30'),
-(1000000004, 12, '2022-07-03'),
-(1000000014, 18, '2021-11-01'),
-(1000000019, 8, '2022-08-16');
+(1000000018, 1, '2022-05-12', '2022-06-10', 0),
+(1000000016, 13, '2022-03-22', '2022-04-20', 0),
+(1000000023, 15, '2022-05-28', '2022-06-26', 0),
+(1000000012, 9, '2021-11-01', '2021-11-30', 0),
+(1000000022, 10, '2022-08-20', '2022-09-18', 0),
+(1000000008, 7, '2021-10-22', '2021-11-20',0),
+(1000000005, 12, '2021-12-18', '2022-01-16', 0),
+(1000000008, 3, '2022-09-09', '2022-10-07', 0),
+(1000000021, 8, '2022-07-26', '2022-08-24', 0),
+(1000000010, 7, '2022-07-14', '2022-08-12', 0),
+(1000000001, 18, '2022-06-05', '2022-07-03', 0),
+(1000000014, 4, '2022-08-19', '2022-09-17', 0),
+(1000000020, 9, '2022-09-10', '2022-10-08', 0),
+(1000000001, 3, '2022-08-16', '2022-09-14', 0),
+(1000000009, 8, '2021-09-29', '2021-10-27', 0),
+(1000000021, 14, '2022-01-29', '2022-02-27', 0),
+(1000000014, 10, '2022-05-12', '2022-06-10', 0),
+(1000000024, 12, '2021-10-28', '2021-10-26', 0),
+(1000000008, 13, '2022-04-08', '2022-05-08', 0),
+(1000000002, 4, '2022-07-26', '2022-08-24', 0),
+(1000000018, 5, '2021-12-09', '2022-01-07', 0),
+(1000000006, 9, '2022-07-30', '2022-08-28', 0),
+(1000000004, 12, '2022-07-03', '2022-08-01', 0),
+(1000000014, 18, '2021-11-01', '2021-11-29', 0),
+(1000000019, 8, '2022-08-16', '2022-09-14', 0);
 
 GO
 /* ## Authors ### */
@@ -498,3 +467,41 @@ values
 (22, 9288434003),
 (15, 9426844056),
 (24, 9565254110);
+
+/* ======================= Rules ======================== */
+-- Case 01: 30 Days is the Maximum number of days allowed to borrow a book
+ALTER TABLE Borrow 
+ADD CHECK((DATEDIFF(year,ReturnDueDate,BorrowDate))<31);
+GO
+
+-- Case 02 : 15 books is The maximum number of borrowed books.
+SELECT CardID, count(BookID) from Borrow group by CardID having count(BookID)<=15;
+GO
+
+-- Case 03: Customers can renew the book return due date twice only
+ALTER TABLE Borrow 
+ADD CHECK((RenewedNum)<3);
+GO
+
+-- Case 04: Every Book Should have only one Publisher
+-- #######  Added in FOREIGN KEY ########
+
+-- Case 05 : Each Branch should have at least 500 Books
+-- #### Note: We used 5 for the test because we don't have 500 record
+SELECT BranchName, count(BookID) FROM Book JOIN LibraryBranch ON Book.BranchID = LibraryBranch.BranchID
+group by BranchName having count(BookID)>=5;
+GO
+
+-- Case 06: A book can be borrowed if available only.
+SELECT BookStatus, BorrowID FROM Book JOIN Borrow ON Book.BookID = Borrow.BookID where BookStatus='Available';
+GO
+
+
+-- Case 07: At Book Authors Table, AuthorsID and BookISB Should not be Null
+-- #######  Added in Table ########
+
+
+-- Case 08: Each customer should be born before 2020
+ALTER TABLE Customer 
+ADD CHECK(DateofBirth<'2020-01-01');
+GO
