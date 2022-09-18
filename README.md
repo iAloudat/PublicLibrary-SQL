@@ -100,7 +100,7 @@ At Book Authors Table, AuthorsID and BookISB Should not be Null<br>
 8. Case 08<br>
 Each one can be a customer <br>
 **Business Rule**<br>
-Each customer should be born before 2020.
+Each customer should be born before 2020 to be able to borrow a book.
 
 # Tables 
 

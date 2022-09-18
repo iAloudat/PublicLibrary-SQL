@@ -1,4 +1,3 @@
-
 --  Drop
 DROP DATABASE PublicLibrary;
 GO

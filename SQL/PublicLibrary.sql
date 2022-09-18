@@ -9,8 +9,8 @@ This File will Create Database, Table, Rules, and Data Records by Following the 
 - Create DataBase Name PublicLibrary
 - Create Tables
 - Create FOREIGN KEY 
-- Create FOREIGN Rules 
-- Create Data Records
+- Create Rules (Some of the rules in this file and the other in Rules.SQL)
+- Add Data Records
 */
 
 /* ============ Database Library System Setup ============ */
@@ -145,7 +145,7 @@ FOREIGN KEY(AuthorID)
 REFERENCES Authors(AuthorID);
 GO
 
-/* ======================= Ruls ======================== */
+/* ======================= Rules ======================== */
 -- Case 01: 30 Days is the Maximum number of days allowed to borrow a book
 ALTER TABLE Borrow 
 ADD CHECK((DATEDIFF(year,ReturnDueDate,BorrowDate))<31);
