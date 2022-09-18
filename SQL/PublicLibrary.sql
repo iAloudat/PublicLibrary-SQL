@@ -146,25 +146,27 @@ REFERENCES Authors(AuthorID);
 GO
 
 /* ======================= Ruls ======================== */
-
 -- Case 01: 30 Days is the Maximum number of days allowed to borrow a book
 ALTER TABLE Borrow 
-ADD CHECK((ReturnDueDate-BorrowDate)<31);
+ADD CHECK((DATEDIFF(year,ReturnDueDate,BorrowDate))<31);
 GO
--- Case 02: >>>> Pleace check File Rules.sql
 
+-- Case 02:
+-- #######  Pleace check File Rules.sql ########
 
 -- Case 03: Customers can renew the book return due date twice only
 ALTER TABLE Borrow 
 ADD CHECK((RenewedNum)<3);
-
+GO
 
 -- Case 04: Every Book Should have only one Publisher
 -- #######  Added in FOREIGN KEY ########
 
--- Case 05: >>>> Pleace check File Rules.sql
+-- Case 05:
+-- #######  Pleace check File Rules.sql ########
 
--- Case 06: >>>> Pleace check File Rules.sql
+-- Case 06:
+-- #######  Pleace check File Rules.sql ########
 
 
 -- Case 07: At Book Authors Table, AuthorsID and BookISB Should not be Null
@@ -172,9 +174,9 @@ ADD CHECK((RenewedNum)<3);
 
 
 -- Case 08: Each customer should be born before 2020
-ALTER TABLE Borrow 
+ALTER TABLE Customer 
 ADD CHECK(DateofBirth<'2020-01-01');
-
+GO
 
 /* ======================= Data Records ======================== */
 
