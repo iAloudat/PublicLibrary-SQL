@@ -11,6 +11,10 @@ This File will Create Database, Table, Rules, and Data Records by Following the 
 - Create FOREIGN KEY 
 - Add Data Records
 - Create Rules
+- Procedure
+- Trigger
+- Test Trigger and  Procedure
+
 */
 
 /* ============ Database Library System Setup ============ */
@@ -493,9 +497,8 @@ group by BranchName having count(BookID)>=5;
 GO
 
 -- Case 06: A book can be borrowed if available only.
-SELECT BookStatus, BorrowID FROM Book JOIN Borrow ON Book.BookID = Borrow.BookID where BookStatus='Available';
+SELECT BookID, BookStatus FROM Book where BookStatus='Available';
 GO
-
 
 -- Case 07: At Book Authors Table, AuthorsID and BookISB Should not be Null
 -- #######  Added in Table ########
@@ -505,3 +508,35 @@ GO
 ALTER TABLE Customer 
 ADD CHECK(DateofBirth<'2020-01-01');
 GO
+
+
+-- ################## Procedure ##################
+
+CREATE PROCEDURE ProBorrow(@CardID As Numeric(10,0), @BookID AS INT, @BorrowDate AS DATE, @RenewedNum AS INT, @RenewDate AS DATE, @ReturnDueDate AS DATE)
+AS BEGIN
+INSERT INTO Borrow VALUES (@CardID, @BookID, @BorrowDate, @RenewedNum, @RenewDate, @ReturnDueDate);
+END;
+GO
+
+-- ################## Trigger Update ReturnDueDate ##################
+
+CREATE TRIGGER TrigReturnDate
+ON Borrow
+AFTER INSERT
+AS
+Update Borrow SET ReturnDueDate = DATEADD(DAY, 30, BorrowDate) WHERE BorrowID=(SELECT TOP 1 BorrowID  FROM Borrow ORDER by BorrowID DESC);
+GO
+
+
+
+-- ################## Test Trigger and  Procedure ##################
+-- DataBase Content 25 Recored in Borrow, Execute ProBorrow will create recored #26
+-- TRIGGER TrigReturnDate will Update Return Date Add 30 instead of  Null
+
+--Execute
+EXECUTE ProBorrow 1000000004,1,'2022-09-20',0,NULL,NULL;
+GO
+SELECT TOP 1 *  FROM Borrow ORDER by BorrowID DESC
+
+
+
