@@ -4,33 +4,6 @@
 
 The Database Library System is intended to Automate the library activities such as creating a new borrower, giving books to the borrowers, maintaining the details of all the item that were available in the books . This also helps the librarians by providing information such as total copies available each book, list of books that belong to a particular category (Short, Long Loan, Reference items, etc.).
 
-
-# TASK
-
-### Document & ER diagram;
-- [x] Deliverable 1 / IYAd 
-- [ ] Deliverable 2 / IYAd 
-
-### Business Rules diagram
-- [x] 7 Cases / Siroos, Mohammed, Doris, Iyad
-- [ ] Need one More / Anyone 
-
-### SQL Table
-- [x] Create / Iyad
-- [x] Review / Team
-- [x] Modify 14/09/2022 / Iyad
-
-### SQL Data
-- [x] Create / Iyad
-- [ ] Review / Team 
-
-### SQL Ruls
-- [ ] Create / Siroos, Mohammed, Doris
-- [ ] Review / Team 
-
-
-
-
 # Deliverable
 
 ### Deliverable 1:
