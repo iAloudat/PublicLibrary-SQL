@@ -1,10 +1,4 @@
 /* ============ Introduction============ 
-Team:
-IYAD ALOUDAT
-MOHAMMAD ALTAMIMI
-SIROOS RAHIMI TAGHANAKI 
-DORIS CHAN YEW TONG-SUEN FA
-
 This File will Create Database, Table, Rules, and Data Records by Following the step below
 - Create DataBase Name PublicLibrary
 - Create Tables
